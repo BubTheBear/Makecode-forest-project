@@ -2,6 +2,12 @@ namespace SpriteKind {
     export const sign1 = SpriteKind.create()
     export const sign2 = SpriteKind.create()
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.sign2, function (sprite, otherSprite) {
+	
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.sign1, function (sprite, otherSprite) {
+	
+})
 scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
@@ -142,6 +148,7 @@ let mySprite = sprites.create(img`
     . . . f d d c d d b b d f . . . 
     . . . . f f f f f f f f f . . . 
     `, SpriteKind.Player)
+mySprite.setStayInScreen(true)
 mySprite.setPosition(148, 108)
 controller.moveSprite(mySprite)
 let sign_1 = sprites.create(img`
